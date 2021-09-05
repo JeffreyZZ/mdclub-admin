@@ -69,7 +69,7 @@ export default ({ state, actions }, searchBar) => {
               <UserMenuItem
                 name="我的主页"
                 icon="person"
-                href={`${window.G_ROOT}/users/${user.user_id}`}
+                href={`${window.G_ROOT}/users/${user.id}`}
               />
               <UserMenuItem
                 name="退出登录"

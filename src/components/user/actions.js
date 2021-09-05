@@ -42,7 +42,7 @@ const as = {
       return;
     }
 
-    getUser({ user_id: user })
+    getUser({ id: user })
       .finally(() => {
         actions.setState({ loading: false });
       })
@@ -76,7 +76,7 @@ const as = {
     loadStart();
     actions.close();
 
-    disableUser({ user_id: state.user.user_id })
+    disableUser({ id: state.user.id })
       .then(actions.deleteSuccess)
       .catch(actions.deleteFail);
   },
@@ -93,7 +93,7 @@ const as = {
     loadStart();
     actions.close();
 
-    enableUser({ user_id: state.user.user_id })
+    enableUser({ id: state.user.id })
       .then(actions.deleteSuccess)
       .catch(actions.deleteFail);
   },

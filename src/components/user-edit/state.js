@@ -1,5 +1,5 @@
 export default {
-  user_id: null,
+  id: null,
   username: '',
   avatar: '',
   cover: '',

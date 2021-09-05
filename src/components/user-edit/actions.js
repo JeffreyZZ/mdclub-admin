@@ -43,7 +43,7 @@ const as = {
 
     if (isComplete) {
       actions.setState({
-        user_id: user.user_id,
+        id: user.id,
         username: user.username,
         avatar: user.avatar,
         cover: user.cover,
@@ -56,7 +56,7 @@ const as = {
       });
     } else {
       actions.setState({
-        user_id: user,
+        id: user,
         username: '',
         avatar: '',
         cover: '',
@@ -76,13 +76,13 @@ const as = {
     }
 
     // 只传入了 ID，获取用户详情
-    getUser({ user_id: user })
+    getUser({ id: user })
       .finally(() => {
         actions.setState({ loading: false });
       })
       .then(({ data }) => {
         actions.setState({
-          user_id: data.user_id,
+          id: data.id,
           username: data.username,
           avatar: data.avatar,
           cover: data.cover,
@@ -115,7 +115,7 @@ const as = {
     loadStart();
 
     // 修改用户信息
-    if (state.user_id) {
+    if (state.id) {
       const $form = $('.mc-user-edit form');
       const formData = {};
 
@@ -123,7 +123,7 @@ const as = {
         formData[item.name] = item.value;
       });
 
-      formData.user_id = state.user_id;
+      formData.id = state.id;
 
       updateUser(formData)
         .finally(() => {
@@ -148,7 +148,7 @@ const as = {
       return;
     }
 
-    deleteAvatar({ user_id: state.user_id })
+    deleteAvatar({ id: state.id })
       .then(({ data }) => {
         actions.setState({ avatar: data });
       })
@@ -164,7 +164,7 @@ const as = {
       return;
     }
 
-    deleteCover({ user_id: state.user_id })
+    deleteCover({ id: state.id })
       .then(({ data }) => {
         actions.setState({ cover: data });
       })

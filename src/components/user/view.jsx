@@ -86,7 +86,7 @@ export default ({ state, actions }) => {
           <div class="section">
             <ItemLabel name="个人信息" />
             <div class="card mdui-card mdui-card-shadow">
-              <ItemText subheader="账号ID" content={user.user_id.toString()} />
+              <ItemText subheader="账号ID" content={user.id.toString()} />
               <ItemText subheader="邮箱" content={user.email} />
               <ItemText
                 subheader="一句话介绍"
