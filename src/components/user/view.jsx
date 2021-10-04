@@ -62,7 +62,7 @@ export default ({ state, actions }) => {
         >
           <div class="gradient mdui-card-media-covered mdui-card-media-covered-gradient" />
           <div class="avatar">
-            <img src={user.avatar.large} />
+            <img src={user.avatar_text.large} />
           </div>
           <div class="username">{user.username}</div>
         </div>

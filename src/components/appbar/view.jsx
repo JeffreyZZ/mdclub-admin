@@ -58,7 +58,7 @@ export default ({ state, actions }, searchBar) => {
               title={`账号：${user.username}\n(${user.email})`}
               mdui-menu="{target: '#appbar-user-popover', covered: false}"
             >
-              <img src={user.avatar.small} width="32" height="32" />
+              <img src={user.avatar_text.small} width="32" height="32" />
             </div>
             <ul class="mdui-menu" id="appbar-user-popover">
               <UserMenuItem

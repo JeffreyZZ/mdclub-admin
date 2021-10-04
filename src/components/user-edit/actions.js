@@ -45,7 +45,7 @@ const as = {
       actions.setState({
         id: user.id,
         username: user.username,
-        avatar: user.avatar,
+        avatar: user.avatar_text,
         cover: user.cover,
         headline: user.headline,
         blog: user.blog,
@@ -84,7 +84,7 @@ const as = {
         actions.setState({
           id: data.id,
           username: data.username,
-          avatar: data.avatar,
+          avatar: data.avatar_text,
           cover: data.cover,
           headline: data.headline,
           blog: data.blog,
